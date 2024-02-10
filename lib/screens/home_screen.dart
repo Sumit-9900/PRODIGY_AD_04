@@ -19,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int countX = 0;
   List<int> winnerbox = [];
 
-
   void reset() {
     setState(() {
       for (int i = 0; i < 9; i++) {
@@ -155,6 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const SizedBox(height: 50),
             Expanded(
               flex: 1,
               child: Row(
@@ -234,13 +234,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(20),
-                    child: Center(
-                      child: Text(
-                        result,
-                        style: GoogleFonts.coiny(
-                          color: Colors.white,
-                          fontSize: 22,
-                        ),
+                    child: Text(
+                      result,
+                      style: GoogleFonts.coiny(
+                        color: Colors.white,
+                        fontSize: 22,
                       ),
                     ),
                   ),
